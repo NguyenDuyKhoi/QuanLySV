@@ -23,7 +23,7 @@ namespace QuanLySinhVien
         {
             try
             {
-                SqlConnection sql = new SqlConnection();
+               
                 conn = new SqlConnection(connectionString);
               
             }
