@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace QuanLySinhVien
 {
@@ -28,6 +29,21 @@ namespace QuanLySinhVien
             else
             {
                 this.Text = "Cập nhập thông tin sinh viên";
+                var r = new DataProvider().Select("selectSV '" + msv + "'");
+                // MessageBox.Show(r[0].ToString());
+                textBox1.Text = r["ho"].ToString();
+                textBox2.Text = r["tendem"].ToString();
+                textBox8.Text = r["ten"].ToString();
+                maskedTextBox1.Text = r["ngsinh"].ToString();
+                if (int.Parse(r["gioitinh"].ToString()) == 1)
+                {
+                    radioButton1.Checked = true;
+                }
+                else { radioButton2.Checked = true; }
+                textBox4.Text = r["quequan"].ToString();
+                textBox5.Text = r["diachi"].ToString();
+                textBox6.Text = r["dienthoai"].ToString();
+                textBox7.Text = r["email"].ToString();
             }
         }
 

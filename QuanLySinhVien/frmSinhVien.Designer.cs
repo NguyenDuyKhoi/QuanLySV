@@ -58,6 +58,9 @@
             panel9 = new Panel();
             maskedTextBox1 = new MaskedTextBox();
             label9 = new Label();
+            panel10 = new Panel();
+            label10 = new Label();
+            textBox8 = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -67,6 +70,7 @@
             panel7.SuspendLayout();
             panel8.SuspendLayout();
             panel9.SuspendLayout();
+            panel10.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -92,7 +96,7 @@
             panel1.Controls.Add(textBox1);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(556, 75);
+            panel1.Size = new Size(556, 57);
             panel1.TabIndex = 2;
             // 
             // panel2
@@ -100,9 +104,9 @@
             panel2.Controls.Add(label2);
             panel2.Controls.Add(textBox2);
             panel2.Controls.Add(panel3);
-            panel2.Location = new Point(12, 93);
+            panel2.Location = new Point(12, 75);
             panel2.Name = "panel2";
-            panel2.Size = new Size(556, 75);
+            panel2.Size = new Size(556, 57);
             panel2.TabIndex = 3;
             // 
             // label2
@@ -151,9 +155,9 @@
             panel4.Controls.Add(radioButton2);
             panel4.Controls.Add(radioButton1);
             panel4.Controls.Add(label4);
-            panel4.Location = new Point(12, 258);
+            panel4.Location = new Point(3, 281);
             panel4.Name = "panel4";
-            panel4.Size = new Size(556, 75);
+            panel4.Size = new Size(556, 58);
             panel4.TabIndex = 5;
             // 
             // radioButton2
@@ -192,9 +196,9 @@
             // 
             panel5.Controls.Add(label5);
             panel5.Controls.Add(textBox4);
-            panel5.Location = new Point(12, 339);
+            panel5.Location = new Point(3, 345);
             panel5.Name = "panel5";
-            panel5.Size = new Size(556, 75);
+            panel5.Size = new Size(556, 60);
             panel5.TabIndex = 6;
             // 
             // label5
@@ -217,9 +221,9 @@
             // 
             panel6.Controls.Add(label6);
             panel6.Controls.Add(textBox5);
-            panel6.Location = new Point(12, 420);
+            panel6.Location = new Point(3, 411);
             panel6.Name = "panel6";
-            panel6.Size = new Size(553, 75);
+            panel6.Size = new Size(553, 60);
             panel6.TabIndex = 7;
             // 
             // label6
@@ -242,9 +246,9 @@
             // 
             panel7.Controls.Add(label7);
             panel7.Controls.Add(textBox6);
-            panel7.Location = new Point(12, 501);
+            panel7.Location = new Point(3, 477);
             panel7.Name = "panel7";
-            panel7.Size = new Size(553, 75);
+            panel7.Size = new Size(553, 68);
             panel7.TabIndex = 8;
             // 
             // label7
@@ -267,9 +271,9 @@
             // 
             panel8.Controls.Add(label8);
             panel8.Controls.Add(textBox7);
-            panel8.Location = new Point(12, 582);
+            panel8.Location = new Point(3, 551);
             panel8.Name = "panel8";
-            panel8.Size = new Size(553, 75);
+            panel8.Size = new Size(553, 64);
             panel8.TabIndex = 9;
             // 
             // label8
@@ -290,7 +294,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(131, 663);
+            button1.Location = new Point(91, 621);
             button1.Name = "button1";
             button1.Size = new Size(127, 49);
             button1.TabIndex = 10;
@@ -300,7 +304,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(337, 663);
+            button2.Location = new Point(307, 621);
             button2.Name = "button2";
             button2.Size = new Size(143, 49);
             button2.TabIndex = 11;
@@ -312,9 +316,9 @@
             // 
             panel9.Controls.Add(maskedTextBox1);
             panel9.Controls.Add(label9);
-            panel9.Location = new Point(12, 177);
+            panel9.Location = new Point(6, 215);
             panel9.Name = "panel9";
-            panel9.Size = new Size(553, 75);
+            panel9.Size = new Size(553, 60);
             panel9.TabIndex = 12;
             // 
             // maskedTextBox1
@@ -335,11 +339,37 @@
             label9.TabIndex = 0;
             label9.Text = "Ngày sinh";
             // 
+            // panel10
+            // 
+            panel10.Controls.Add(label10);
+            panel10.Controls.Add(textBox8);
+            panel10.Location = new Point(9, 138);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(553, 67);
+            panel10.TabIndex = 13;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(3, 29);
+            label10.Name = "label10";
+            label10.Size = new Size(32, 20);
+            label10.TabIndex = 0;
+            label10.Text = "Tên";
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(126, 22);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(409, 27);
+            textBox8.TabIndex = 1;
+            // 
             // frmSinhVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(580, 784);
+            Controls.Add(panel10);
             Controls.Add(panel9);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -371,6 +401,8 @@
             panel8.PerformLayout();
             panel9.ResumeLayout(false);
             panel9.PerformLayout();
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -406,5 +438,8 @@
         private Panel panel9;
         private Label label9;
         private MaskedTextBox maskedTextBox1;
+        private Panel panel10;
+        private Label label10;
+        private TextBox textBox8;
     }
 }

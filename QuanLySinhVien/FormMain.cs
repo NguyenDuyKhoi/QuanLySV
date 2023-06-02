@@ -16,7 +16,7 @@
         private void FormMain_Load_1(object sender, EventArgs e)
         {
 
-            dgvData.DataSource = new DataProvider().SelectData("exec SelectAllSinhVien", null);
+            dgvData.DataSource = new DataProvider().SelectData("exec SelectAllSinhVien");
             dgvData.Columns["masinhvien"].HeaderText = "Mã SV";
             dgvData.Columns["hoten"].HeaderText = "Họ và tên";
             dgvData.Columns["ngaysinh"].HeaderText = "Ngày sinh";

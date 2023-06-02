@@ -33,7 +33,7 @@ namespace QuanLySinhVien
 
 
         }
-        public DataTable SelectData(string sql,List<CustomPameters> lstParameters)
+        public DataTable SelectData(string sql)
             
         {
             
@@ -56,7 +56,45 @@ namespace QuanLySinhVien
                 conn.Close(); 
             }
          }
+        public DataRow Select(string sql)
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand(sql, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt.Rows[0];
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show("Lỗi load thông tin chi tiết:"+ ex.Message);
+                return null;
+            }
+            finally
+            {
+                conn.Close ();
+            }
+        }
+        public int ExeCute(string sql)
+        {
+            try
+            {
+                conn.Open ();
+                cmd = new SqlCommand(sql,conn);
+                return (int)cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi thực thi câu lệnh:"+ ex.Message );
+                return -100;
+            }
+            finally
+            {
+                conn.Close () ;
+            }
+        }
     }
    
 }
