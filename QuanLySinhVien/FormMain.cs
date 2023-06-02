@@ -16,6 +16,12 @@
         private void FormMain_Load_1(object sender, EventArgs e)
         {
 
+         LoadDSSV();
+        }
+
+       private void LoadDSSV()
+        {
+            
             dgvData.DataSource = new DataProvider().SelectData("exec SelectAllSinhVien");
             dgvData.Columns["masinhvien"].HeaderText = "Mã SV";
             dgvData.Columns["hoten"].HeaderText = "Họ và tên";
@@ -27,33 +33,20 @@
             dgvData.Columns["email"].HeaderText = "Email";
         }
 
-        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 var msv = dgvData.Rows[e.RowIndex].Cells["masinhvien"].Value.ToString();
                 new frmSinhVien(msv).ShowDialog();
+                LoadDSSV();
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             new frmSinhVien(null).ShowDialog();
+            LoadDSSV() ;    
         }
     }
 }

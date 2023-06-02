@@ -77,13 +77,19 @@ namespace QuanLySinhVien
                 conn.Close ();
             }
         }
-        public int ExeCute(string sql)
+        public int ExeCute(string sql,List<CustomPameters> lstPara)
         {
             try
             {
                 conn.Open ();
                 cmd = new SqlCommand(sql,conn);
-                return (int)cmd.ExecuteScalar();
+               cmd.CommandType = CommandType.StoredProcedure;
+                foreach (var p in lstPara)
+                {
+                    cmd.Parameters.AddWithValue(p.key,p.value);
+                }
+                var rs = cmd.ExecuteNonQuery();
+                return (int)rs; 
             }
             catch (Exception ex)
             {

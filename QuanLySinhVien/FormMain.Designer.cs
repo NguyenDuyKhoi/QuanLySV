@@ -51,7 +51,7 @@
             dgvData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvData.Size = new Size(1047, 371);
             dgvData.TabIndex = 0;
-            dgvData.CellContentClick += dgvData_CellContentClick;
+    
             dgvData.CellDoubleClick += dgvData_CellDoubleClick;
             // 
             // panel1
@@ -90,7 +90,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(187, 27);
             textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+          
             // 
             // label1
             // 
@@ -100,7 +100,7 @@
             label1.Size = new Size(62, 20);
             label1.TabIndex = 0;
             label1.Text = "Từ khóa";
-            label1.Click += label1_Click;
+           
             // 
             // FormMain
             // 

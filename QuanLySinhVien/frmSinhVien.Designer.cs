@@ -81,7 +81,7 @@
             label1.Size = new Size(29, 20);
             label1.TabIndex = 0;
             label1.Text = "Họ";
-            label1.Click += label1_Click_1;
+          
             // 
             // textBox1
             // 
@@ -181,7 +181,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Nam";
             radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+      
             // 
             // label4
             // 
@@ -310,7 +310,7 @@
             button2.TabIndex = 11;
             button2.Text = "Hủy";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+           
             // 
             // panel9
             // 
