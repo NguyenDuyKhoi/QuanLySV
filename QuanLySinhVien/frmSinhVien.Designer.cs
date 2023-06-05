@@ -309,6 +309,7 @@
             button2.TabIndex = 11;
             button2.Text = "Hủy";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // panel9
             // 
