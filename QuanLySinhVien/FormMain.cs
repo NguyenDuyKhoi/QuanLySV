@@ -12,17 +12,24 @@
 
 
         }
-
+        private string tukhoa = "";
         private void FormMain_Load_1(object sender, EventArgs e)
         {
 
-         LoadDSSV();
+            LoadDSSV();
         }
 
-       private void LoadDSSV()
+        private void LoadDSSV()
         {
-            
-            dgvData.DataSource = new DataProvider().SelectData("exec SelectAllSinhVien");
+            List<CustomPameters> lstPara = new List<CustomPameters>();
+            lstPara.Add(new CustomPameters()
+            {
+                key = "@tukhoa",
+                value = tukhoa
+            });
+
+
+            dgvData.DataSource = new DataProvider().SelectData("SelectAllSinhVien", lstPara);
             dgvData.Columns["masinhvien"].HeaderText = "Mã SV";
             dgvData.Columns["hoten"].HeaderText = "Họ và tên";
             dgvData.Columns["ngaysinh"].HeaderText = "Ngày sinh";
@@ -46,7 +53,13 @@
         private void button2_Click(object sender, EventArgs e)
         {
             new frmSinhVien(null).ShowDialog();
-            LoadDSSV() ;    
+            LoadDSSV();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadDSSV();
+            tukhoa = textBox1.Text;
         }
     }
 }

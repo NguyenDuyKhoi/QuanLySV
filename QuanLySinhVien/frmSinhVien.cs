@@ -45,40 +45,42 @@ namespace QuanLySinhVien
                 textBox5.Text = r["diachi"].ToString();
                 textBox6.Text = r["dienthoai"].ToString();
                 textBox7.Text = r["email"].ToString();
-            } 
+            }
         }
 
 
-        
 
-       
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             string sql = "";
-            string ho=textBox1.Text;
-            string tendem=textBox2.Text;
-            string ten=textBox8.Text;
+            string ho = textBox1.Text;
+            string tendem = textBox2.Text;
+            string ten = textBox8.Text;
             DateTime ngaysinh;
             try
             {
                 ngaysinh = DateTime.ParseExact(maskedTextBox1.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture)
             ;
             }
-            catch (Exception){
+            catch (Exception)
+            {
                 MessageBox.Show("Ngày sinh không hợp lệ:");
                 maskedTextBox1.Select();
                 return;
             }
-            string gioitinh=radioButton1.Checked ? "1" : "0";
+            string gioitinh = radioButton1.Checked ? "1" : "0";
             string quequan = textBox4.Text;
-            string diachi=textBox5.Text;
-            string dienthoai=textBox6.Text;
-            string email=textBox7.Text;
+            string diachi = textBox5.Text;
+            string dienthoai = textBox6.Text;
+            string email = textBox7.Text;
             List<CustomPameters> lstPara = new List<CustomPameters>();
-            if(string.IsNullOrEmpty(msv)) {
+            if (string.IsNullOrEmpty(msv))
+            {
                 sql = "ThemMoiSV";
-               
+
             }
             else
             {
@@ -92,7 +94,7 @@ namespace QuanLySinhVien
             lstPara.Add(new CustomPameters()
             {
                 key = "@ho",
-                value= ho
+                value = ho
             });
             lstPara.Add(new CustomPameters()
             {
@@ -127,17 +129,17 @@ namespace QuanLySinhVien
             lstPara.Add(new CustomPameters()
             {
                 key = "@dienthoai",
-                value =dienthoai
+                value = dienthoai
             });
             lstPara.Add(new CustomPameters()
             {
                 key = "@email",
                 value = email
-            }) ;
+            });
             var rs = new DataProvider().ExeCute(sql, lstPara);
-            if(rs == 1)
+            if (rs == 1)
             {
-                if(string.IsNullOrEmpty(msv))
+                if (string.IsNullOrEmpty(msv))
                 {
                     MessageBox.Show("Thêm mới sinh viên thành công");
                 }
@@ -151,9 +153,12 @@ namespace QuanLySinhVien
             {
                 MessageBox.Show("Thực thi thất bại");
             }
-            
+
         }
 
-       
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

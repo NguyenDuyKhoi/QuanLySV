@@ -33,7 +33,7 @@ namespace QuanLySinhVien
 
 
         }
-        public DataTable SelectData(string sql)
+        public DataTable SelectData(string sql,List<CustomPameters> lstPara)
             
         {
             
@@ -43,6 +43,11 @@ namespace QuanLySinhVien
                 conn.Open();
           
                 cmd= new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach(var para in lstPara)
+                {
+                    cmd.Parameters.AddWithValue(para.key,para.value);
+                }
                 dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
                 return dt;
