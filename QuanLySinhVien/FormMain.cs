@@ -1,4 +1,6 @@
-﻿namespace QuanLySinhVien
+﻿using System.Security.Cryptography;
+
+namespace QuanLySinhVien
 {
     public partial class FormMain : Form
     {
@@ -30,14 +32,7 @@
 
 
             dgvData.DataSource = new DataProvider().SelectData("SelectAllSinhVien", lstPara);
-            dgvData.Columns["masinhvien"].HeaderText = "Mã SV";
-            dgvData.Columns["hoten"].HeaderText = "Họ và tên";
-            dgvData.Columns["ngaysinh"].HeaderText = "Ngày sinh";
-            dgvData.Columns["gt"].HeaderText = "Giới tính";
-            dgvData.Columns["quequan"].HeaderText = "Quê quán";
-            dgvData.Columns["diachi"].HeaderText = "Địa chỉ";
-            dgvData.Columns["dienthoai"].HeaderText = "Số điện thoại";
-            dgvData.Columns["email"].HeaderText = "Email";
+
         }
 
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -60,6 +55,41 @@
         {
             LoadDSSV();
             tukhoa = textBox1.Text;
+        }
+
+        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == dgvData.Columns["btnDelete"].Index)
+                {
+                    if (
+                        MessageBox.Show(
+                            "Bạn có chắc chắn muốn xóa sinh viên:" + dgvData.Rows[e.RowIndex].Cells["hoten"].Value.ToString() + "?"
+                            , "Xác nhận xóa!!!",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        var maSV = dgvData.Rows[e.RowIndex].Cells["masinhvien"].Value.ToString();
+                        var sql = "deleteSV";
+                        var lstPara = new List<CustomPameters>()
+                    {
+                        new CustomPameters
+                        {
+                            key="@masinhvien",
+                            value= maSV
+                        }
+                    };
+                        var result = new DataProvider().ExeCute(sql, lstPara);
+                        if (result == 1)
+                        {
+                            MessageBox.Show("Xóa sinh viên thành công");
+                            LoadDSSV();
+                        }
+
+                    }
+                }
+            }
         }
     }
 }
