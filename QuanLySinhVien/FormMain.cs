@@ -2,9 +2,9 @@
 
 namespace QuanLySinhVien
 {
-    public partial class FormMain : Form
+    public partial class frmDDSV : Form
     {
-        public FormMain()
+        public frmDDSV()
         {
             InitializeComponent();
         }
@@ -19,6 +19,7 @@ namespace QuanLySinhVien
         {
 
             LoadDSSV();
+
         }
 
         private void LoadDSSV()
@@ -90,6 +91,16 @@ namespace QuanLySinhVien
                     }
                 }
             }
+        }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
