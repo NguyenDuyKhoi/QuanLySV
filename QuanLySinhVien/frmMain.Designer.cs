@@ -28,13 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            panel1 = new Panel();
+            contextMenuStrip1 = new ContextMenuStrip(components);
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
             dSSinhViênToolStripMenuItem = new ToolStripMenuItem();
             dSTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
-            panel1 = new Panel();
             menuStrip1.SuspendLayout();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(0, 45);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1176, 615);
+            panel1.TabIndex = 1;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
             // 
             // menuStrip1
             // 
@@ -43,7 +58,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1176, 28);
-            menuStrip1.TabIndex = 0;
+            menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
             // menuToolStripMenuItem
@@ -56,32 +71,24 @@
             // dSSinhViênToolStripMenuItem
             // 
             dSSinhViênToolStripMenuItem.Name = "dSSinhViênToolStripMenuItem";
-            dSSinhViênToolStripMenuItem.Size = new Size(179, 26);
+            dSSinhViênToolStripMenuItem.Size = new Size(224, 26);
             dSSinhViênToolStripMenuItem.Text = "DS Sinh Viên";
             dSSinhViênToolStripMenuItem.Click += dSSinhViênToolStripMenuItem_Click;
             // 
             // dSTàiKhoảnToolStripMenuItem
             // 
             dSTàiKhoảnToolStripMenuItem.Name = "dSTàiKhoảnToolStripMenuItem";
-            dSTàiKhoảnToolStripMenuItem.Size = new Size(179, 26);
-            dSTàiKhoảnToolStripMenuItem.Text = "DS Tài Khoản";
+            dSTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
+            dSTàiKhoảnToolStripMenuItem.Text = "DS Tài khoản";
             dSTàiKhoảnToolStripMenuItem.Click += dSTàiKhoảnToolStripMenuItem_Click;
-            // 
-            // panel1
-            // 
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 28);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1176, 673);
-            panel1.TabIndex = 1;
             // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1176, 701);
-            Controls.Add(panel1);
             Controls.Add(menuStrip1);
+            Controls.Add(panel1);
             MainMenuStrip = menuStrip1;
             Name = "frmMain";
             Text = "frmMain";
@@ -93,11 +100,11 @@
         }
 
         #endregion
-
+        private Panel panel1;
+        private ContextMenuStrip contextMenuStrip1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuToolStripMenuItem;
         private ToolStripMenuItem dSSinhViênToolStripMenuItem;
         private ToolStripMenuItem dSTàiKhoảnToolStripMenuItem;
-        private Panel panel1;
     }
 }

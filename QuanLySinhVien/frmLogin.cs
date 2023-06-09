@@ -16,8 +16,9 @@ namespace QuanLySinhVien
         {
             InitializeComponent();
         }
-        public string tendangnhap = "";
-        public string matkhau = "";
+        public string tentaikhoan = "";
+        
+        public string loaitk="" ;
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -27,6 +28,12 @@ namespace QuanLySinhVien
 
         private void button1_Click(object sender, EventArgs e)
         {
+            #region ktra
+            if (comboBox1.SelectedIndex<0)
+            {
+                MessageBox.Show("Vui lòng chọn loại tài khoản");
+                    return;
+            }    
             if (string.IsNullOrEmpty(textBox1.Text))
             {
                 MessageBox.Show("Vui lòng nhập tài khoản!!!");
@@ -39,19 +46,38 @@ namespace QuanLySinhVien
                 textBox2.Select();
                 return;
             }
-            tendangnhap = textBox1.Text;
+            #endregion
+            tentaikhoan = textBox1.Text;
+            #region swtk
+            switch (comboBox1.Text)
+            {
+                case "Quản trị viên":
+                    loaitk = "admin";
+                    break;
+                case "Giáo viên":
+                    loaitk = "gv";
+                    break;
+
+            }
+            #endregion
+
 
             List<CustomPameters> lst = new List<CustomPameters>()
             {
+                 new CustomPameters()
+                {
+                    key="@loaitaikhoan",
+                    value=loaitk
+                },
                 new CustomPameters()
                 {
-                    key="@taikhoan",
-                    value=textBox1.Text,
+                    key="@tentaikhoan",
+                    value=textBox1.Text
                 },
                  new CustomPameters()
                 {
                     key="@matkhau",
-                    value=textBox2.Text,
+                    value=textBox2.Text
                 },
             };
             var rs = new DataProvider().SelectData("dangnhap", lst);
@@ -76,6 +102,26 @@ namespace QuanLySinhVien
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

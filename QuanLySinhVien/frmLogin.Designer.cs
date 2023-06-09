@@ -34,39 +34,44 @@
             textBox2 = new TextBox();
             button1 = new Button();
             button2 = new Button();
+            label3 = new Label();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(47, 50);
+            label1.Location = new Point(47, 82);
             label1.Name = "label1";
             label1.Size = new Size(110, 20);
             label1.TabIndex = 0;
             label1.Text = "Tên đăng nhập:";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(47, 104);
+            label2.Location = new Point(47, 128);
             label2.Name = "label2";
             label2.Size = new Size(70, 20);
             label2.TabIndex = 1;
             label2.Text = "Mật khẩu";
+            label2.Click += label2_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(180, 43);
+            textBox1.Location = new Point(180, 82);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(342, 27);
             textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(180, 97);
+            textBox2.Location = new Point(180, 128);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(342, 27);
             textBox2.TabIndex = 3;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button1
             // 
@@ -88,11 +93,31 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(47, 34);
+            label3.Name = "label3";
+            label3.Size = new Size(102, 20);
+            label3.TabIndex = 6;
+            label3.Text = "Loại tài khoản";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Quản trị viên", "Giáo viên" });
+            comboBox1.Location = new Point(180, 26);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(342, 28);
+            comboBox1.TabIndex = 7;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox1);
+            Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox2);
@@ -115,5 +140,7 @@
         private TextBox textBox2;
         private Button button1;
         private Button button2;
+        private Label label3;
+        private ComboBox comboBox1;
     }
 }

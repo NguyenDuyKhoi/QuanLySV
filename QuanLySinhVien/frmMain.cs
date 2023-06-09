@@ -17,9 +17,19 @@ namespace QuanLySinhVien
             InitializeComponent();
         }
 
+
+        private string loaitk;
+        private string taikhoan;
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            var fn = new frmLogin();
+            taikhoan = fn.tentaikhoan;
+            loaitk = fn.loaitk;
+            if (loaitk.Equals("gv"))
+            {
+                dSTàiKhoảnToolStripMenuItem.Visible = false;
+            }
+          
 
         }
         private void AddForm(Form f)
@@ -32,8 +42,14 @@ namespace QuanLySinhVien
             this.panel1.Controls.Add(f);
             f.Show();
         }
+
+
+
+
+
         private void dSSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             frmDDSV f = new frmDDSV();
             AddForm(f);
         }

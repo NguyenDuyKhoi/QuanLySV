@@ -60,15 +60,21 @@ namespace QuanLySinhVien
                 sql = "updateAccount";
                 lstPara.Add(new CustomPameters()
                 {
-                    key = "@tentaikhoan",
+                    key = "@mataikhoan",
                     value = msd
                 });
             }
             lstPara.Add(new CustomPameters()
             {
+                key = "@tentaikhoan",
+                value = tentaikhoan
+            });
+            lstPara.Add(new CustomPameters()
+            {
                 key = "@matkhau",
                 value = matkhau
             });
+
             var rs = new DataProvider().ExeCute(sql, lstPara);
             if (rs == 1)
             {
@@ -86,6 +92,11 @@ namespace QuanLySinhVien
             {
                 MessageBox.Show("Thực thi thất bại");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

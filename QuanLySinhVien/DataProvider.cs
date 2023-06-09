@@ -33,31 +33,8 @@ namespace QuanLySinhVien
 
 
         }
-        public DataTable SelectData1(string sql, List<CustomPameters> lstPara)
-
-        {
-
-
-            try
-            {
-                conn.Open();
-                sql = "exec SelectAllAccount";
-                cmd = new SqlCommand(sql, conn);
-               
-                dt = new DataTable();
-                dt.Load(cmd.ExecuteReader());
-                return dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi load dữ liệu:" + ex.Message);
-                return null;
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+        
+          
         public DataTable SelectData(string sql,List<CustomPameters> lstPara)
             
         {
