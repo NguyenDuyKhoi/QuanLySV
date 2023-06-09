@@ -1,15 +1,16 @@
 ﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
 GO
- create procedure [dbo].[ThemMoiAccount]
+CREATE procedure [dbo].[ThemMoiAccount]
   @tentaikhoan varchar(50),
   @matkhau varchar(250)
+ 
   AS 
   BEGIN 
   INSERT INTO Account
   (
-  tentaikhoan,
-  matkhau)VALUES
-  (@tentaikhoan,
+  mataikhoan,
+  tentaikhoan,matkhau)VALUES
+  ( CAST(NEXT VALUE for sinhvienSeq as varchar(30)),@tentaikhoan,
   @matkhau)
   IF @@ROWCOUNT > 0 BEGIN RETURN 1 END
   ELSE BEGIN RETURN 0 END;

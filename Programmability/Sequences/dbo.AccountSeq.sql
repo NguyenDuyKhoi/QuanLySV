@@ -1,0 +1,7 @@
+﻿CREATE SEQUENCE [dbo].[AccountSeq]
+  AS bigint
+  START WITH 1
+  INCREMENT BY 1
+  NO CYCLE
+  CACHE 
+GO

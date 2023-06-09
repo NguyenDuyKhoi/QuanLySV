@@ -1,12 +1,18 @@
 ﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
 GO
 CREATE procedure [dbo].[dangnhap]
-@taikhoan varchar(50),
+@loaitaikhoan varchar(10) ,
+@tentaikhoan varchar(50),
 @matkhau varchar(50)
  as
 begin
+if @loaitaikhoan='admin'
+select * from AccountAdmin
+where taikhoan = @tentaikhoan
+and matkhau = @matkhau
+else 
 select * from Account
-where tentaikhoan = @taikhoan
-and matkhau = @matkhau; 
+where tentaikhoan=@tentaikhoan
+and matkhau=@matkhau;
 end
 GO
