@@ -29,7 +29,10 @@ namespace QuanLySinhVien
             {
                 dSTàiKhoảnToolStripMenuItem.Visible = false;
             }
-          
+            else
+            {
+                dSSinhViênToolStripMenuItem.Visible = false;
+            }
 
         }
         private void AddForm(Form f)
