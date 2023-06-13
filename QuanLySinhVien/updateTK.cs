@@ -80,11 +80,11 @@ namespace QuanLySinhVien
             {
                 if (string.IsNullOrEmpty(msd))
                 {
-                    MessageBox.Show("Thêm mới sinh viên thành công");
+                    MessageBox.Show("Thêm mới tài khoản thành công");
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhập thông tin sinh viên thành công");
+                    MessageBox.Show("Cập nhập thông tin tài khoản thành công");
                 }
                 this.Dispose();
             }

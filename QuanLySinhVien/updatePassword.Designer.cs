@@ -100,7 +100,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "updatePassword";
-            Text = "updatePassword";
+            Text = "Thay đổi mật khẩu và tài khoản";
             Load += updatePassword_Load;
             ResumeLayout(false);
             PerformLayout();

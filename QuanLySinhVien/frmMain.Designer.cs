@@ -72,7 +72,7 @@
             // dSSinhViênToolStripMenuItem
             // 
             dSSinhViênToolStripMenuItem.Name = "dSSinhViênToolStripMenuItem";
-            dSSinhViênToolStripMenuItem.Size = new Size(224, 26);
+            dSSinhViênToolStripMenuItem.Size = new Size(177, 26);
             dSSinhViênToolStripMenuItem.Text = "DS Sinh Viên";
             dSSinhViênToolStripMenuItem.Click += dSSinhViênToolStripMenuItem_Click;
             // 
@@ -80,13 +80,13 @@
             // 
             dSTàiKhoảnToolStripMenuItem.Name = "dSTàiKhoảnToolStripMenuItem";
             dSTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
-            dSTàiKhoảnToolStripMenuItem.Text = "DS Tài khoản";
+            dSTàiKhoảnToolStripMenuItem.Text = "DS Tài khoảnGV";
             dSTàiKhoảnToolStripMenuItem.Click += dSTàiKhoảnToolStripMenuItem_Click;
             // 
             // thayToolStripMenuItem
             // 
             thayToolStripMenuItem.Name = "thayToolStripMenuItem";
-            thayToolStripMenuItem.Size = new Size(224, 26);
+            thayToolStripMenuItem.Size = new Size(177, 26);
             thayToolStripMenuItem.Text = "Thay đổi";
             thayToolStripMenuItem.Click += thayToolStripMenuItem_Click;
             // 
@@ -99,7 +99,7 @@
             Controls.Add(panel1);
             MainMenuStrip = menuStrip1;
             Name = "frmMain";
-            Text = "frmMain";
+            Text = "Menu";
             Load += frmMain_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

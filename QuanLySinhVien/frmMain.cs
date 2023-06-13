@@ -75,9 +75,9 @@ namespace QuanLySinhVien
 
         private void thayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            updatePassword f=new updatePassword();
+            updatePassword f = new updatePassword();
             f.ShowDialog();
-            
+
         }
     }
 }

@@ -125,7 +125,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "frmLogin";
-            Text = "frmLogin";
+            Text = "Đăng nhập";
             FormClosing += frmLogin_FormClosing;
             Load += frmLogin_Load;
             ResumeLayout(false);

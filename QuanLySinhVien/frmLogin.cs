@@ -17,8 +17,8 @@ namespace QuanLySinhVien
             InitializeComponent();
         }
         public string tentaikhoan = "";
-        
-        public string loaitk  ;
+
+        public string loaitk;
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -30,11 +30,11 @@ namespace QuanLySinhVien
         private void button1_Click(object sender, EventArgs e)
         {
             #region ktra
-            if (comboBox1.SelectedIndex<0)
+            if (comboBox1.SelectedIndex < 0)
             {
                 MessageBox.Show("Vui lòng chọn loại tài khoản");
-                    return;
-            }    
+                return;
+            }
             if (string.IsNullOrEmpty(textBox1.Text))
             {
                 MessageBox.Show("Vui lòng nhập tài khoản!!!");
@@ -49,7 +49,7 @@ namespace QuanLySinhVien
             }
             #endregion
             tentaikhoan = textBox1.Text;
-             loaitk = "";
+            loaitk = "";
             #region swtk
             switch (comboBox1.Text)
             {
@@ -87,9 +87,9 @@ namespace QuanLySinhVien
             if (rs.Rows.Count > 0)
             {
                 MessageBox.Show("Đăng nhập thành công");
-                
+
                 this.Hide();
-                
+
             }
             else
             {

@@ -55,7 +55,7 @@ namespace QuanLySinhVien
 
 
 
-                MessageBox.Show("Cập nhập thông tin sinh viên thành công");
+                MessageBox.Show("Cập nhập thông tin tài khoản thành công");
 
                 this.Dispose();
             }
