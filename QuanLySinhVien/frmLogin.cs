@@ -18,7 +18,8 @@ namespace QuanLySinhVien
         }
         public string tentaikhoan = "";
         
-        public string loaitk="" ;
+        public string loaitk  ;
+
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -48,12 +49,14 @@ namespace QuanLySinhVien
             }
             #endregion
             tentaikhoan = textBox1.Text;
+             loaitk = "";
             #region swtk
             switch (comboBox1.Text)
             {
                 case "Quản trị viên":
                     loaitk = "admin";
                     break;
+
                 case "Giáo viên":
                     loaitk = "gv";
                     break;
@@ -84,10 +87,9 @@ namespace QuanLySinhVien
             if (rs.Rows.Count > 0)
             {
                 MessageBox.Show("Đăng nhập thành công");
-                frmMain f = new frmMain();
+                
                 this.Hide();
-                f.ShowDialog();
-                this.Show();
+                
             }
             else
             {

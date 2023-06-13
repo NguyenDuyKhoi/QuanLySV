@@ -35,6 +35,7 @@
             menuToolStripMenuItem = new ToolStripMenuItem();
             dSSinhViênToolStripMenuItem = new ToolStripMenuItem();
             dSTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
+            thayToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // 
             // menuToolStripMenuItem
             // 
-            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { dSSinhViênToolStripMenuItem, dSTàiKhoảnToolStripMenuItem });
+            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { dSSinhViênToolStripMenuItem, dSTàiKhoảnToolStripMenuItem, thayToolStripMenuItem });
             menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             menuToolStripMenuItem.Size = new Size(60, 24);
             menuToolStripMenuItem.Text = "Menu";
@@ -81,6 +82,13 @@
             dSTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
             dSTàiKhoảnToolStripMenuItem.Text = "DS Tài khoản";
             dSTàiKhoảnToolStripMenuItem.Click += dSTàiKhoảnToolStripMenuItem_Click;
+            // 
+            // thayToolStripMenuItem
+            // 
+            thayToolStripMenuItem.Name = "thayToolStripMenuItem";
+            thayToolStripMenuItem.Size = new Size(224, 26);
+            thayToolStripMenuItem.Text = "Thay đổi";
+            thayToolStripMenuItem.Click += thayToolStripMenuItem_Click;
             // 
             // frmMain
             // 
@@ -106,5 +114,6 @@
         private ToolStripMenuItem menuToolStripMenuItem;
         private ToolStripMenuItem dSSinhViênToolStripMenuItem;
         private ToolStripMenuItem dSTàiKhoảnToolStripMenuItem;
+        private ToolStripMenuItem thayToolStripMenuItem;
     }
 }

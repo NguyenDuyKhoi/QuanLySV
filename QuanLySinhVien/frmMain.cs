@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,16 +24,25 @@ namespace QuanLySinhVien
         private void frmMain_Load(object sender, EventArgs e)
         {
             var fn = new frmLogin();
+            fn.ShowDialog();
             taikhoan = fn.tentaikhoan;
             loaitk = fn.loaitk;
-            if (loaitk.Equals("gv"))
+            if (loaitk.Equals("admin"))
             {
-                dSTàiKhoảnToolStripMenuItem.Visible = false;
+
+                dSSinhViênToolStripMenuItem.Visible = false;
             }
             else
             {
-                dSSinhViênToolStripMenuItem.Visible = false;
+                dSTàiKhoảnToolStripMenuItem.Visible = false;
+                thayToolStripMenuItem.Visible = false;
             }
+
+
+
+
+
+
 
         }
         private void AddForm(Form f)
@@ -61,6 +71,13 @@ namespace QuanLySinhVien
         {
             frmAccount f = new frmAccount();
             AddForm(f);
+        }
+
+        private void thayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updatePassword f=new updatePassword();
+            f.ShowDialog();
+            
         }
     }
 }
