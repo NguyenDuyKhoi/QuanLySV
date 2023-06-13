@@ -29,6 +29,7 @@ namespace QuanLySinhVien
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             #region ktra
             if (comboBox1.SelectedIndex < 0)
             {
@@ -87,8 +88,9 @@ namespace QuanLySinhVien
             if (rs.Rows.Count > 0)
             {
                 MessageBox.Show("Đăng nhập thành công");
-
-                this.Hide();
+              
+               
+               
 
             }
             else
@@ -100,7 +102,7 @@ namespace QuanLySinhVien
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

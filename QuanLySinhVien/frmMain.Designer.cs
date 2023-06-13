@@ -36,6 +36,7 @@
             dSSinhViênToolStripMenuItem = new ToolStripMenuItem();
             dSTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
             thayToolStripMenuItem = new ToolStripMenuItem();
+            dSMônHọcToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             // 
             // menuToolStripMenuItem
             // 
-            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { dSSinhViênToolStripMenuItem, dSTàiKhoảnToolStripMenuItem, thayToolStripMenuItem });
+            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { dSSinhViênToolStripMenuItem, dSTàiKhoảnToolStripMenuItem, thayToolStripMenuItem, dSMônHọcToolStripMenuItem });
             menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             menuToolStripMenuItem.Size = new Size(60, 24);
             menuToolStripMenuItem.Text = "Menu";
@@ -72,23 +73,30 @@
             // dSSinhViênToolStripMenuItem
             // 
             dSSinhViênToolStripMenuItem.Name = "dSSinhViênToolStripMenuItem";
-            dSSinhViênToolStripMenuItem.Size = new Size(177, 26);
+            dSSinhViênToolStripMenuItem.Size = new Size(196, 26);
             dSSinhViênToolStripMenuItem.Text = "DS Sinh Viên";
             dSSinhViênToolStripMenuItem.Click += dSSinhViênToolStripMenuItem_Click;
             // 
             // dSTàiKhoảnToolStripMenuItem
             // 
             dSTàiKhoảnToolStripMenuItem.Name = "dSTàiKhoảnToolStripMenuItem";
-            dSTàiKhoảnToolStripMenuItem.Size = new Size(224, 26);
+            dSTàiKhoảnToolStripMenuItem.Size = new Size(196, 26);
             dSTàiKhoảnToolStripMenuItem.Text = "DS Tài khoảnGV";
             dSTàiKhoảnToolStripMenuItem.Click += dSTàiKhoảnToolStripMenuItem_Click;
             // 
             // thayToolStripMenuItem
             // 
             thayToolStripMenuItem.Name = "thayToolStripMenuItem";
-            thayToolStripMenuItem.Size = new Size(177, 26);
+            thayToolStripMenuItem.Size = new Size(196, 26);
             thayToolStripMenuItem.Text = "Thay đổi";
             thayToolStripMenuItem.Click += thayToolStripMenuItem_Click;
+            // 
+            // dSMônHọcToolStripMenuItem
+            // 
+            dSMônHọcToolStripMenuItem.Name = "dSMônHọcToolStripMenuItem";
+            dSMônHọcToolStripMenuItem.Size = new Size(196, 26);
+            dSMônHọcToolStripMenuItem.Text = "DS Môn học";
+            dSMônHọcToolStripMenuItem.Click += dSMônHọcToolStripMenuItem_Click;
             // 
             // frmMain
             // 
@@ -115,5 +123,6 @@
         private ToolStripMenuItem dSSinhViênToolStripMenuItem;
         private ToolStripMenuItem dSTàiKhoảnToolStripMenuItem;
         private ToolStripMenuItem thayToolStripMenuItem;
+        private ToolStripMenuItem dSMônHọcToolStripMenuItem;
     }
 }
