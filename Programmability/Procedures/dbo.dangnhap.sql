@@ -10,9 +10,13 @@ if @loaitaikhoan='admin'
 select * from AccountAdmin
 where taikhoan = @tentaikhoan
 and matkhau = @matkhau
-else 
+else if @loaitaikhoan='gv'
 select * from Account
 where tentaikhoan=@tentaikhoan
+and matkhau=@matkhau;
+else 
+select * from SinhVien
+where masinhvien=@tentaikhoan
 and matkhau=@matkhau;
 end
 GO

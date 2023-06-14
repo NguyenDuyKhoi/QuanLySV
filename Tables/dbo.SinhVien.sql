@@ -13,6 +13,7 @@
   [diachi] [nvarchar](150) NULL,
   [dienthoai] [varchar](30) NULL,
   [email] [varchar](150) NULL,
+  [matkhau] [varchar](50) NULL DEFAULT ('123'),
   CONSTRAINT [PK_SinhVien] PRIMARY KEY CLUSTERED ([masinhvien])
 )
 ON [PRIMARY]

@@ -8,11 +8,3 @@
 )
 ON [PRIMARY]
 GO
-
-ALTER TABLE [dbo].[Diem]
-  ADD CONSTRAINT [FK_Diem_MonHoc] FOREIGN KEY ([mamonhoc]) REFERENCES [dbo].[MonHoc] ([mamonhoc])
-GO
-
-ALTER TABLE [dbo].[Diem]
-  ADD CONSTRAINT [FK_Diem_SinhVien] FOREIGN KEY ([masinhvien]) REFERENCES [dbo].[SinhVien] ([masinhvien])
-GO
