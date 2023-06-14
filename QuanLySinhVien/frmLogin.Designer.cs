@@ -105,7 +105,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Quản trị viên", "Giáo viên" });
+            comboBox1.Items.AddRange(new object[] { "Quản trị viên", "Giáo viên", "Sinh viên" });
             comboBox1.Location = new Point(180, 26);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(342, 28);

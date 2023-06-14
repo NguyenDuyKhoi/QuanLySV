@@ -24,21 +24,33 @@ namespace QuanLySinhVien
         private void frmMain_Load(object sender, EventArgs e)
         {
             var fn = new frmLogin();
-        fn.ShowDialog();
+            fn.ShowDialog();
+            var button = fn.button1_Click;
             taikhoan = fn.tentaikhoan;
             loaitk = fn.loaitk;
-           
-                if (loaitk.Equals("admin"))
+            
+            if (loaitk.Equals("admin"))
+            {
+
+                dSSinhViênToolStripMenuItem.Visible = false;
+                dSMônHọcToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                dSTàiKhoảnToolStripMenuItem.Visible = false;
+                thayToolStripMenuItem.Visible = false;
+                if (loaitk.Equals("gv"))
                 {
 
-                    dSSinhViênToolStripMenuItem.Visible = false;
-                    dSMônHọcToolStripMenuItem.Visible = false;
                 }
                 else
                 {
-                    dSTàiKhoảnToolStripMenuItem.Visible = false;
-                    thayToolStripMenuItem.Visible = false;
-                } 
+                    dSSinhViênToolStripMenuItem.Visible = false;
+                    dSMônHọcToolStripMenuItem.Visible = false;
+                }
+            }
+           
+
 
 
 
@@ -87,5 +99,13 @@ namespace QuanLySinhVien
             frmMonHoc f = new frmMonHoc();
             AddForm(f);
         }
+
+        private void ĐăngKýStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var f = new frmDangKy(taikhoan);
+            AddForm(f);
+        }
+
+
     }
 }

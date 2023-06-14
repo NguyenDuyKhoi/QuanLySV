@@ -16,12 +16,30 @@ namespace QuanLySinhVien
         public frmDangKy(string masv)
         {
             InitializeComponent();
-            this.masv=masv;
+            this.masv = masv;
         }
 
         private void frmDangKy_Load(object sender, EventArgs e)
         {
+            LoadMonDangKy();
+        }
+        private void LoadMonDangKy()
+        {
+            List<CustomPameters> lst = new List<CustomPameters>()
+            {
+                new CustomPameters()
+                {
+                     key="@masinhvien",
+                     value=masv
+                }
+            };
+            dataGridView1.DataSource = new DataProvider().SelectData("MonDangKy", lst);
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var f= new frmDangKyMonHoc(masv); f.ShowDialog();
+            LoadMonDangKy();
         }
     }
 }
